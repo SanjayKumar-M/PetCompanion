@@ -1,16 +1,18 @@
 import Image from 'next/image'
 import React from 'react'
 import menu from '../assets/menu.png'
-import logo from '../assets/logo.png'
+import { FaUser } from "react-icons/fa";
 const Navbar = () => {
+
+    const navItems = ["Home", "About", "Contact Us"];
     return (
-        <nav className='flex items-center justify-between text-center text-2xl p-4 bg-purple-400 '>
-            <a href='/'><Image src={logo} width={100} height={220} className='h-3xl' /></a>
+        <nav className='flex items-center  text-center text-2xl p-4 justify-around'>
+            <a href='/' className='text-black font-extrabold p-2 text-3xl font-mono'>PetCompanion</a>
             <ul className='hidden lg:flex items-center gap-10 cursor-pointer '>
-                <li className='border border-black bg-neutral-800 text-white px-4 p-2 rounded-3xl'>Search</li>
-                <li className='border border-black bg-neutral-800 text-white px-4 p-2 rounded-3xl'>About Us</li>
-                <li className='border border-black bg-neutral-800 text-white px-4 p-2 rounded-3xl'>Contact Us</li>
-                <li className='border border-black bg-neutral-800 text-white px-4 p-2 rounded-3xl'>Account</li>
+                <li className='hidden lg:flex items-center gap-10 cursor-pointer font-mono font-bold'>Home</li>
+                <li className='hidden lg:flex items-center gap-10 cursor-pointer font-mono font-bold'>About</li>
+                <li className='hidden lg:flex items-center gap-10 cursor-pointer font-mono font-bold'>Contact</li>
+                <li className='hidden lg:flex items-center gap-10 cursor-pointer font-mono pb-1 '><FaUser /></li>
             </ul>
 
             <Image src={menu} width={20} height={20} className='lg:hidden' />
@@ -20,3 +22,9 @@ const Navbar = () => {
 }
 
 export default Navbar
+
+// <li className='hidden lg:flex items-center gap-10 cursor-pointer font-mono'>Search</li>
+//                 <li className='hidden lg:flex items-center gap-10 cursor-pointer font-mono'>About Us</li>
+//                 <li className='hidden lg:flex items-center gap-10 cursor-pointer font-mono'>Contact Us</li>
+//                 <li className='hidden lg:flex items-center gap-10 cursor-pointer font-mono'>Account</li>
+//className='hidden lg:flex items-center gap-10 cursor-pointer font-mono '
