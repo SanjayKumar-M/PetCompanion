@@ -1,13 +1,13 @@
 import Image from 'next/image'
 import React from 'react'
 import menu from '../assets/menu.png'
-import { FaUser } from "react-icons/fa";
+import { FaUser ,FaPaw} from "react-icons/fa";
 const Navbar = () => {
 
     const navItems = ["Home", "About", "Contact Us"];
     return (
-        <nav className='flex items-center  text-center text-2xl p-4 justify-around'>
-            <a href='/' className='text-black font-extrabold p-2 text-3xl font-mono'>PetCompanion</a>
+        <nav className='flex items-center  text-center text-2xl p-4 justify-around '>
+            <a href='/' className='text-black font-extrabold p-2 text-3xl font-mono inline-flex gap-2 '><span><FaPaw /></span>PetCompanion</a>
             <ul className='hidden lg:flex items-center gap-10 cursor-pointer '>
                 <li className='hidden lg:flex items-center gap-10 cursor-pointer font-mono font-bold'>Home</li>
                 <li className='hidden lg:flex items-center gap-10 cursor-pointer font-mono font-bold'>About</li>
