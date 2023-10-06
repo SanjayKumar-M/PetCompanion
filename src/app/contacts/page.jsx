@@ -5,11 +5,11 @@ import React from 'react';
 
 const Contacts = () => {
     return (
-        <>
+        < div className='bg-gradient-to-r from-indigo-200 via-red-200 to-yellow-100'>
         <Navbar />
             <div className="min-h-screen flex flex-col items-center justify-center p-3 ">
 
-                <div className="w-full max-w-md p-6 border border-black rounded-xlbg-gradient-to-b from-gray-900 to-gray-600 bg-gradient-to-r text-white text-3xl ">
+                <div className="w-full max-w-md p-6 border border-black rounded-xlbg-gradient-to-b from-gray-900 to-gray-600 bg-gradient-to-r text-3xl ">
                     <p className="text-center mb-4">Want to know more? Reach out to us</p>
                     <form action="" method="post" className="flex flex-col space-y-4">
                         <label className="text-sm">Full Name</label>
@@ -30,7 +30,7 @@ const Contacts = () => {
                     </form>
                 </div>
             </div>
-        </>
+        </div>
     );
 };
 
