@@ -1,9 +1,11 @@
 import React from 'react'
 import Link from 'next/link'
 import { FaGoogle } from 'react-icons/fa'
+import Navbar from '@/Components/Navbar'
 const page = () => {
   return (
     <div>
+      <Navbar />
          <div className='min-h-screen flex items-center justify-center bg-super-color shadow-lg'>
             <div className='flex flex-col items-center border border-black p-12 px-24 rounded-lg bg-slate-200'>
                 <label className='text-black justify-center'>First Name</label>
