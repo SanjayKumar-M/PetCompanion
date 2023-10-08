@@ -1,5 +1,6 @@
 import React from 'react'
-
+import Link from 'next/link'
+import { FaGoogle } from 'react-icons/fa'
 const page = () => {
   return (
     <div>
@@ -21,7 +22,7 @@ const page = () => {
                 <input type='email' className='border border-black p-2 rounded' />
 
                 <button className='bg-black text-white hover:bg-black-dark p-2 rounded mt-4'>
-                    Register
+                    Sign Up
                 </button>
 
                 <p className='my-2'>or</p>
@@ -30,7 +31,7 @@ const page = () => {
                     Sign Up with Google <FaGoogle className='inline-block ml-2' />
                 </button>
 
-                <span className='text-black mt-2'>Already a user? <Link href='/' className='font-bold'>Login!</Link></span>
+                <span className='text-black mt-2'>Already a user? <Link href='/login' className='font-bold'>Login!</Link></span>
             </div>
         </div>
     </div>
