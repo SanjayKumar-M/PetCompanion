@@ -29,7 +29,7 @@ const Navbar = () => {
                         </span>
                     </Link>
                 </li>
-                <li className='hidden lg:flex items-center gap-2 cursor-pointer font-mono pb-1 '><FaUser /></li>
+                <li className='hidden lg:flex items-center gap-2 cursor-pointer font-mono pb-1 '> <Link href='/register'><FaUser /></Link></li>
             </ul>
 
             <Image src={menu} width={20} height={20} className='lg:hidden' />
