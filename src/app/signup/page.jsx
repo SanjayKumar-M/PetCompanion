@@ -1,7 +1,9 @@
+'use client'
 import React from 'react'
 import Link from 'next/link'
 import { FaGoogle } from 'react-icons/fa'
 import Navbar from '@/Components/Navbar'
+import { signIn } from 'next-auth/react'
 const page = () => {
   return (
     <div>
@@ -29,7 +31,7 @@ const page = () => {
 
                 <p className='my-2'>or</p>
 
-                <button className='bg-black text-white hover:bg-black-dark p-2 rounded'>
+                <button className='bg-black text-white hover:bg-black-dark p-2 rounded' onClick={()=>signIn('google')}>
                     Sign Up with Google <FaGoogle className='inline-block ml-2' />
                 </button>
 
