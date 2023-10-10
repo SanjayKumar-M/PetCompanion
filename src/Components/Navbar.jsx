@@ -33,7 +33,7 @@ const Navbar = () => {
                 </li>
                 {
                     status === 'authenticated' ? (
-                        <li className='hidden lg:flex items-center gap-2 cursor-pointer font-mono font-bold border p-3 rounded-3xl bg-black text-white' onClick={() => signOut()}> <Link href='/signup'>
+                        <li className='hidden lg:flex items-center gap-2 cursor-pointer  border p-3 px-8 rounded-3xl bg-black text-white' onClick={() => signOut()}> <Link href='/signup'>
                                Sign Out
                         </Link></li>
                     ) : (<li className='hidden lg:flex items-center gap-2 cursor-pointer font-mono pb-1 ' > <Link href='/signup'><FaUser /></Link></li>)

@@ -5,7 +5,7 @@ import Navbar from '@/Components/Navbar';
 
 const page = () => {
     const { data: session, status } = useSession();
-    if (status === 'authenticated') {
+    
         return (
 
             <div>
@@ -15,7 +15,7 @@ const page = () => {
 
             </div>
         )
-    }
+    
 }
 
 
