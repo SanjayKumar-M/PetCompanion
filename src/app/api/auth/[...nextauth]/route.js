@@ -1,6 +1,7 @@
 import NextAuth from "next-auth/next";
 import GoogleProvider from "next-auth/providers/google";
 import axios from "axios";
+import { dbConnection } from "@/lib/dbconnection";
 const authOptions = {
   providers: [
     GoogleProvider({
@@ -17,17 +18,13 @@ const authOptions = {
       if (account.provider === 'google') {
         const {name, email} = user;
         try {
-            const respone = await axios.post('http://localhost:3000/api/profile',{
-              method:"POST",
-              headers:{
-                "Content-Type":"application/json",
-              },
-              body: JSON.stringify({
-                name,email,
-              })
-            })
+          await dbConnection()
+          const response = await axios.post('http://localhost:3000/api/profile', {
+            name,
+            email,
+        });
 
-            if(respone.ok){
+            if(response.ok){
               return user;
             }
         }

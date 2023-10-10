@@ -13,11 +13,11 @@ const userProfileSchema = new Schema(
         },
         address:{
             type:String,
-            required:true,
+           
         },
         mobile:{
             type:String,
-            required:true,
+            
         },
         profileImg:{
             type:String
