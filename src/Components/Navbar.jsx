@@ -1,11 +1,13 @@
+'use client'
 import Image from 'next/image';
 import React from 'react';
 import menu from '../assets/menu.png';
 import { FaUser, FaPaw, FaSearch } from 'react-icons/fa';
 import Link from 'next/link';
-
+import { useSession, signOut } from 'next-auth/react';
 const Navbar = () => {
-    // const navItems = ["Home", "About", "Contact Us"];
+    const { status ,data:session} = useSession()
+
     return (
         <nav className='flex items-center  text-center text-2xl p-4 justify-around bg-gradient-to-r from-indigo-200 via-red-200 to-yellow-100'>
             <a href='/' className='text-black font-extrabold p-2 text-3xl font-mono inline-flex gap-2'>
@@ -29,7 +31,13 @@ const Navbar = () => {
                         </span>
                     </Link>
                 </li>
-                <li className='hidden lg:flex items-center gap-2 cursor-pointer font-mono pb-1 '> <Link href='/signup'><FaUser /></Link></li>
+                {
+                    status === 'authenticated' ? (
+                        <li className='hidden lg:flex items-center gap-2 cursor-pointer font-mono font-bold border p-3 rounded-3xl bg-black text-white' onClick={() => signOut()}> <Link href='/signup'>
+                               Sign Out
+                        </Link></li>
+                    ) : (<li className='hidden lg:flex items-center gap-2 cursor-pointer font-mono pb-1 ' > <Link href='/signup'><FaUser /></Link></li>)
+                }
             </ul>
 
             <Image src={menu} width={20} height={20} className='lg:hidden' />
