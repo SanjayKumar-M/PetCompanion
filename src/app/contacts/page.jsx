@@ -9,10 +9,10 @@ const Contacts = () => {
     return (
         < div className=''>
         <Navbar />
-            <div className="min-h-screen flex flex-row-reverse items-center justify-around p-3   ">
+        <div className="min-h-screen flex flex-col-reverse items-center justify-around p-3 md:flex-row-reverse">
 
-                <div className="w-full max-w-md p-6 rounded-3xl shadow-2xl shadow-gray-950">
-                    <p className="text-center mb-4">Want to know more? Reach out to us</p>
+        <div className="w-full max-w-md p-6 rounded-3xl shadow-2xl shadow-gray-950 ">
+                    <p className="text-center mb-4 font-extrabold text-lg">Bark at us anytime! Your pets voices matter</p>
                     <form action="" method="post" className="flex flex-col space-y-4 ">
                         <label className="text-sm">Full Name</label>
                         <input type="text" className="border border-black py-2 px-3 rounded-3xl" />
@@ -32,10 +32,12 @@ const Contacts = () => {
                     </form>
                 </div>
 
-                <div className=''>
-                <Image src={contact} height={100} width={100} className='object-cover h-max w-max' />
+                <div className='flex flex-col items-center justify-center'>
+                <h1 className='font-bold text-center text-6xl transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 '>In a world full of chatter, we're<br /> here to listen to your pets<br /><span className='bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-transparent bg-clip-text'> meows and woofs</span></h1>
+                <Image src={contact} height={200} width={200} className="object-contain h-96 w-96 rounded-3xl mt-7 shadow-xl shadow-orange-400 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300" />
 
-                    Wanna ask as some thing? Contact Us
+
+                   
                 </div>
             </div>
         </div>
