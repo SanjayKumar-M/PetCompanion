@@ -14,8 +14,8 @@ const Navbar = () => {
                 <span><FaPaw /></span>PetCompanion
             </a>
             <ul className='lg:flex items-center gap-10 cursor-pointer'>
-                <li className='hidden lg:flex items-center gap-2 cursor-pointer font-mono font-bold hover:border border-black rounded-lg'>
-                    <Link href='/'>Home</Link>
+                <li className='hidden lg:flex items-center gap-2 cursor-pointer font-mono text-black font-bold '>
+                    <Link href='/' className=''>Home</Link>
                 </li>
                 <li className='hidden lg:flex items-center gap-10 cursor-pointer font-mono font-bold'>
                     <Link href='/about'>About</Link>
