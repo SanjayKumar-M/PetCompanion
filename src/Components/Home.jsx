@@ -2,6 +2,7 @@ import React from 'react';
 import petImage from '../assets/lab.png';
 import Image from 'next/image';
 
+
 const Home = () => {
     return (
         <div className="flex items-center">
