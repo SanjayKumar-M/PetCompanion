@@ -14,17 +14,17 @@ const Contacts = () => {
         <div className="w-full max-w-md p-6 rounded-3xl shadow-2xl shadow-gray-950 ">
                     <p className="text-center mb-4 font-extrabold text-lg">Bark at us anytime! Your pets voices matter</p>
                     <form action="" method="post" className="flex flex-col space-y-4 ">
-                        <label className="text-sm">Full Name</label>
-                        <input type="text" className="border border-black py-2 px-3 rounded-3xl" />
+                        <label className="text-sm" >Full Name</label>
+                        <input type="text" className="border border-black py-2 px-3 rounded-3xl" placeholder='Elon Musk'/>
 
                         <label className="text-sm">Email</label>
-                        <input type="email" className="border border-black py-2 px-3 rounded-3xl" />
+                        <input type="email" className="border border-black py-2 px-3 rounded-3xl" placeholder='example@email.com'/>
 
                         <label className="text-sm">You are</label>
-                        <input type="text" className="border border-black py-2 px-3 rounded-3xl" />
+                        <input type="text" className="border border-black py-2 px-3 rounded-3xl" placeholder='Buyer / Seller' />
 
                         <label className="text-sm">Message</label>
-                        <textarea className="border border-black py-2 px-3 h-24 rounded-2xl"></textarea>
+                        <textarea className="border border-black py-2 px-3 h-24 rounded-2xl" placeholder='Your queries!'></textarea>
 
                         <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2  rounded-full">
                             Submit
