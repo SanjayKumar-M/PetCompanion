@@ -19,7 +19,7 @@ const authOptions = {
         const {name, email} = user;
         try {
           await dbConnection()
-          const response = await axios.post('http://localhost:3000/api/profile', {
+          const response = await axios.post('/api/profile', {
             name,
             email,
         });
