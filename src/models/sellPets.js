@@ -3,10 +3,7 @@ import mongoose, { Schema, models } from 'mongoose';
 const petTypes = ['Select Pet Type', 'cat', 'dog', 'bird'];
 
 const sellPetsSchema = new Schema({
-  name: {
-    type: String,
-   
-  },
+  
   breed: {
     type: String,
     required: true,
