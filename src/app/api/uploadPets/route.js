@@ -4,9 +4,9 @@ import { NextResponse } from "next/server";
 
 export async function POST(request){
 
-    const {name,age,breed,sex,price,petImage,contact} = await request.json();
+    const {name,age,breed,sex,price,petImage,contact,mobile,description} = await request.json();
     await dbConnection();
-    await Pets.create({name,age,breed,sex,price,petImage,contact});
+    await Pets.create({name,age,breed,sex,price,petImage,contact,mobile,description});
     return NextResponse.json({"message":"Pets Details are Listed successfully"},{status:201})
 
 
