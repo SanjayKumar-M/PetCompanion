@@ -1,6 +1,7 @@
 import { dbConnection } from "@/lib/dbconnection";
 import Pets from "@/models/sellPets";
 import { NextResponse } from "next/server";
+import axios from "axios";
 
 export async function POST(request){
 
@@ -11,3 +12,14 @@ export async function POST(request){
 
 
 }
+export const GET = async (request) => {
+    try {
+      await dbConnection();
+  
+      const pet = await Pets.find();
+      return new NextResponse(JSON.stringify(pet), { status: 200 });
+    } catch (err) {
+      return new NextResponse("Database Error", { status: 500 });
+    }
+  };
+  

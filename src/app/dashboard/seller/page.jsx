@@ -26,7 +26,7 @@ const Page = () => {
 
 
         try {
-            const response = await axios.post('http://localhost:3000/api/uploadPets', formData);
+            const response = await axios.post('/api/uploadPets', formData);
             console.log('Data saved:', response.data);
         } catch (error) {
             console.error('Error saving data:', error);

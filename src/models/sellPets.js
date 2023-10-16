@@ -27,7 +27,7 @@ const sellPetsSchema = new Schema({
   petType: {
     type: String,
     enum: petTypes,
-    default: petTypes[0],
+    
   },
   contact: {
     type: String,
@@ -45,3 +45,18 @@ const sellPetsSchema = new Schema({
 
 const Pets = models.Pets || mongoose.model('Pets', sellPetsSchema);
 export default Pets;
+
+
+
+// {
+  
+//   "breed": "Ninja",
+//   "age": "3",
+//   "petType": "cat",
+//   "contact": "123 Main St",
+//   "mobile": "24234650",
+//   "description": "A lovely Ninja cat ready for adoption",
+//   "sex": "Male",
+//   "price": 100,
+//   "petImage": "path_to_image.jpg"
+// }
