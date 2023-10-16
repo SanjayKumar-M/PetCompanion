@@ -19,7 +19,7 @@ const authOptions = {
         const {name, email} = user;
         try {
           await dbConnection()
-          const response = await axios.post('https://pet-companion-gray.vercel.app/api/profile', {
+          const response = await axios.post('/api/profile', {
             name,
             email,
         });
